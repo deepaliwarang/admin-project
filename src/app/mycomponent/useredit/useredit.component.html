@@ -1,0 +1,58 @@
+<div class="container">
+    <h3 mat-dialog-title>Edit User</h3>
+  
+    <form class="mat-dialog-content" (ngSubmit)="onSubmit" #formControl="ngForm">
+  
+  
+      <div class="form">
+          <mat-form-field color="accent">
+            <input matInput placeholder="ID" [(ngModel)]="data.id" name="id">
+          </mat-form-field>
+      </div>
+  
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="firstName" [(ngModel)]="data.firstName" name="firstName">
+        </mat-form-field>
+      </div>
+  
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="lastName" [(ngModel)]="data.lastName" name="lastName">
+        </mat-form-field>
+      </div>
+
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="gender" [(ngModel)]="data.gender" name="gender">
+        </mat-form-field>
+      </div>
+
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="email" [(ngModel)]="data.email" name="email">
+        </mat-form-field>
+      </div>
+  
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="birthDate" [(ngModel)]="data.birthDate" name="birthDate">
+        </mat-form-field>
+      </div>
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="height" [(ngModel)]="data.height" name="height">
+        </mat-form-field>
+      </div>
+      <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="university" [(ngModel)]="data.university" name="university">
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button [type]="submit" [disabled]="!formControl.valid"  (click)="updateUser(data.id)">Save</button>
+        <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
